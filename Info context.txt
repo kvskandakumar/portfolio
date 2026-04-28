@@ -1,0 +1,107 @@
+K.V.Skanda Kumar
+Software Development Lead @ Chimple Learning Foundations | Building the Future of Free Educational Technology | EdTech Innovator | Scaling Open-Source Education Solutions at Chimple
+
+1. About : 
+Tech Lead and Full Stack Developer with 6+ years of experience in software development, data engineering, and analytics in the EdTech domain. Progressed from Junior to Lead Developer, owning end-to-end system architecture across multi-platform applications.
+
+Expert in React, Capacitor, Flutter, Phaser, Cocos, and BigQuery-based data systems. Specialized in offline-first architecture, cross-platform integration, and performance optimization for low-end devices.
+
+Delivered global solutions, working directly with CEOs, CTOs, and international stakeholders, and contributed to scaling the organization from ~10 to 100+ employees. Presented products at mEducation Alliance 2025 (Kenya) and client showcases in Dubai.
+
+
+2. EXPERIENCE:
+
+Tech Lead / Lead Software Developer
+Sutara Learning Foundation | Mar 2020 – Present
+
+Breaking down 6 years experince: 
+
+Lead Developer (Last 2 Years) : 
+=> Led architecture and development of a multi-platform EdTech ecosystem integrating React, Capacitor, Android, PWAs, and Angular, enabling seamless interoperability across applications Such as Chimple Kids Learning, Tangerine Client App
+
+=> Spearheaded RESPECT platform integration across 3+ applications, enabling standardized content launch, tracking, and interoperability  Such as Curious Reader, Tangerine, Chimple Kids app
+
+=> Developed wrapper solutions for web-based learning apps, improving performance and compatibility across Android devices
+
+=> Collaborated directly with CEOs, CTOs, and international stakeholders to define product architecture and delivery roadmap
+
+=> Represented and demonstrated product at mEducation Alliance 2025 (Kenya) and client presentations in Dubai, supporting global rollout
+
+=> Mentored and guided developers, improving team productivity and delivery timelines
+
+Senior Software Developer (2 Years):
+
+=> Built a container-based application (React + Capacitor) to integrate existing Cocos games, reducing redevelopment effort by 40%+
+
+=> Played major role in designed and implemented a fully offline-first architecture, achieving 100% offline functionality and improving app usability in low-connectivity regions backend as Supabase 
+
+=> Built and optimized features for React-based web applications with AWS and MongoDB backend
+
+=> Contributed to cross-platform architecture decisions, enabling reuse of game content across mobile and web platforms
+
+=> Improved application performance and reduced load times through optimization technique 
+
+Junior Software Developer (2 Years):
+
+=> Developed a Course Creator application using Flutter + Dart for the Chimple platform
+
+=> Implemented core features, UI components, and API integrations for content creation workflows
+
+=> Developed and enhanced 2D educational games using Cocos Creator + TypeScript, improving engagement and learning experience
+
+DATA ENGINEERING & ANALYTICS EXPERIENCE (Parallel Role – 2+ Years) :
+
+=> Designed and implemented ETL pipelines in BigQuery, handling large-scale GA4 event data processing
+
+=> Built 20+ dashboards in Looker Studio, enabling actionable insights for product and business teams explain more in how data i have shared helps in making the reports
+
+=> Designed data models and pipelines for event tracking, analytics, and reporting systems
+
+=> Improved data processing efficiency and reduced query execution time significantly
+
+3. Projects :
+
+extract the project info from EXPERIENCE section
+
+4. Skills :
+
+=> Languages & Frameworks: React, Angular, Capacitor, Flutter, Dart, Phaser, Cocos Creator, TypeScript
+
+=> Data & Backend: Firebase, Supabase, BigQuery, SQL, GA4, Looker Studio, AWS, MongoDB, REST APIs, xAPI
+
+=> Architecture & Concepts: Offline-First Systems, PWAs, Container-based Applications, ETL Pipelines, Cost Optimization, CI/CD
+
+
+5. Educations :
+         B.Tech, Electronic and Communication Engineering ( Intell Engineering College)
+
+6. Achievements :
+
+=> 🚀 Promoted 3 times in 6 years (Junior → Senior → Lead Developer), recognizing consistent high performance and leadership impact
+
+=> 🌍 Led development of offline-first applications (100% offline capability), expanding usability in low-connectivity regions and low-end devices
+
+=> 🧩 Reduced redevelopment effort by 40%+ by creating a container-based architecture integrating existing game engines (Cocos/Phaser)
+
+=> 🔗 Successfully integrated RESPECT platform APIs across multiple applications, enabling standardized learning workflows and interoperability
+
+=> 👥 Played a key role in scaling the engineering team and product from ~10 to 100+ employees, contributing to system design and engineering practices
+
+=> 🌐 Represented the organization at international platforms, including:
+                => mEducation Alliance 2025 (Kenya)
+                => Client product presentations in Dubai
+
+=> 🎤 Conducted live demos and EdTech workshops for global stakeholders and partners
+
+📉 Reduced BigQuery costs by 80–90% by optimizing ETL pipelines using partitioning, clustering, and query tuning
+
+=> ⚡ Improved data processing performance by 2–3x through efficient pipeline design and query optimization
+
+=> When i am started i am only one person which is taking care of Data analytics and as well as data engineering 
+
+
+7. Contact :
+
+K.V. Skanda Kumar
+📍 Bangalore, India | 📧 kvskandakumar@gmail.com | 📞 7981611434 | 🔗 [LinkedIn(https://www.linkedin.com/in/skanda-kumar-45876a1a0/)/GitHub(https://github.com/kvskandakumar)]
+
