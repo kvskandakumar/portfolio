@@ -45,11 +45,11 @@ type Project = {
 
 const profile = {
   name: "K.V. Skanda Kumar",
-  role: "Software Development Lead",
+  role: "Tech Lead | Full Stack Engineer",
   company:
     "Chimple Learning Foundations | Building the Future of Free Educational Technology",
   tagline:
-    "Tech Lead and Full Stack Developer with 6+ years of experience across software development, data engineering, and analytics in EdTech.",
+    "Building scalable, offline-first systems & data platforms",
   location: "Bangalore, India",
   email: "kvskandakumar@gmail.com",
   phone: "+91 7981611434",
@@ -59,19 +59,19 @@ const profile = {
 };
 
 const shortBio =
-  "Tech Lead and Full Stack Developer with 6+ years building educational products, offline-first platforms, and analytics systems that work reliably across real-world constraints.";
+  "Tech Lead with 6+ years building scalable applications, offline-first platforms, and data systems optimized for low-connectivity environments.";
 
 const metrics: Metric[] = [
-  { value: "6+", label: "Years building EdTech products" },
-  { value: "100%", label: "Offline capability achieved" },
-  { value: "20+", label: "Looker Studio dashboards built" },
-  { value: "80-90%", label: "BigQuery cost reduction" },
+  { value: "6+", label: "Years Experience" },
+  { value: "100%", label: "Offline Capability" },
+  { value: "15+", label: "Applications Delivered" },
+  { value: "20+", label: "Analytics Dashboards" },
 ];
 
 const about = [
-  "Progressed from Junior Software Developer to Software Development Lead, owning end-to-end architecture for multi-platform educational products used across mobile, web, and offline environments.",
-  "Worked deeply with React, Capacitor, Flutter, Phaser, Cocos Creator, BigQuery, and analytics systems, with a strong focus on low-connectivity use cases and low-end Android performance.",
-  "Partnered directly with CEOs, CTOs, and international stakeholders, helped scale the organization from roughly 10 to 100+ employees, and represented products at mEducation Alliance 2025 in Kenya and client showcases in Dubai.",
+  "Progressed from Junior Developer to Tech Lead, driving end-to-end architecture for scalable systems used across web, mobile, and offline environments.",
+  "Tech Lead with 6+ years of experience designing and scaling multi-platform systems across web, mobile, and data platforms.",
+  "Specialized in offline-first architecture, cross-platform integrations, and BigQuery-based analytics pipelines optimized for real-world constraints.",
 ];
 
 const highlights: Highlight[] = [
@@ -367,17 +367,17 @@ function App() {
             variants={fadeIn}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <p className="eyebrow">EdTech Engineering Portfolio</p>
+            <p className="eyebrow">Lead Portfolio</p>
             {/* <h1>{profile.name}</h1> */}
             <p className="hero-title">{profile.role}</p>
-            <p className="hero-text">{shortBio}</p>
+            <p className="hero-text">{profile.tagline}</p>
 
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">
-                Explore Projects <ArrowRight size={18} />
+                View Projects <ArrowRight size={18} />
               </a>
               <a className="button button-secondary" href={`mailto:${profile.email}`}>
-                <Mail size={18} /> Email Me
+                <Mail size={18} /> Contact Me
               </a>
             </div>
 
