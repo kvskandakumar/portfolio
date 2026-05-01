@@ -47,11 +47,11 @@ type Project = {
   image: string;
 };
 
-type SimpleProject = {
-  title: string;
-  tech: string[];
-  link?: string;
-};
+// type SimpleProject = {
+//   title: string;
+//   tech: string[];
+//   link?: string;
+// };
 
 const base = import.meta.env.BASE_URL;
 
@@ -226,33 +226,33 @@ const projects: Project[] = [
   },
 ];
 
-const moreProjects: SimpleProject[] = [
-  { title: "ReflectlyApp Smart Diary", tech: ["Flutter", "Dart"] },
-  { title: "Course Creator", tech: ["Flutter", "Dart"] },
-  { title: "Bahama App", tech: ["Cocos", "TypeScript"] },
-  { title: "Web Class", tech: ["React", "TypeScript", "AWS", "MongoDB"] },
-  { title: "join_litercy_activity", tech: ["Phaser", "TypeScript"] },
-  { title: "Crazy-dots", tech: ["Phaser", "TypeScript"] },
-  { title: "wordJoin", tech: ["Phaser", "TypeScript"] },
-  { title: "Account-manager", tech: ["Flutter Plugin"] },
-  {
-    title: "Ixo-claim crypto mining",
-    tech: ["GitHub Project"],
-    link: "https://github.com/chimple/ixo-claim",
-  },
-  {
-    title: "Chimple website",
-    tech: ["GitHub Project"],
-    link: "https://github.com/chimple/website",
-  },
-  { title: "Chimple Teacher app", tech: ["Flutter", "Dart"] },
-  { title: "Tangerine & tangy form", tech: ["Angular", "Docker"] },
-  { title: "tangerine-client-app", tech: ["Capacitor", "Angular"] },
-  { title: "Curious Reader CRcontainer", tech: ["Android", "nanoHTTP"] },
-  { title: "FeedTheMonsterJS", tech: ["Plain HTML", "CSS"] },
-  { title: "assessment-survey-js", tech: ["Plain HTML", "CSS"] },
-  { title: "CRWebPlayer (Storybook)", tech: ["Plain HTML", "CSS"] },
-];
+// const moreProjects: SimpleProject[] = [
+//   { title: "ReflectlyApp Smart Diary", tech: ["Flutter", "Dart"] },
+//   { title: "Course Creator", tech: ["Flutter", "Dart"] },
+//   { title: "Bahama App", tech: ["Cocos", "TypeScript"] },
+//   { title: "Web Class", tech: ["React", "TypeScript", "AWS", "MongoDB"] },
+//   { title: "join_litercy_activity", tech: ["Phaser", "TypeScript"] },
+//   { title: "Crazy-dots", tech: ["Phaser", "TypeScript"] },
+//   { title: "wordJoin", tech: ["Phaser", "TypeScript"] },
+//   { title: "Account-manager", tech: ["Flutter Plugin"] },
+//   {
+//     title: "Ixo-claim crypto mining",
+//     tech: ["GitHub Project"],
+//     link: "https://github.com/chimple/ixo-claim",
+//   },
+//   {
+//     title: "Chimple website",
+//     tech: ["GitHub Project"],
+//     link: "https://github.com/chimple/website",
+//   },
+//   { title: "Chimple Teacher app", tech: ["Flutter", "Dart"] },
+//   { title: "Tangerine & tangy form", tech: ["Angular", "Docker"] },
+//   { title: "tangerine-client-app", tech: ["Capacitor", "Angular"] },
+//   { title: "Curious Reader CRcontainer", tech: ["Android", "nanoHTTP"] },
+//   { title: "FeedTheMonsterJS", tech: ["Plain HTML", "CSS"] },
+//   { title: "assessment-survey-js", tech: ["Plain HTML", "CSS"] },
+//   { title: "CRWebPlayer (Storybook)", tech: ["Plain HTML", "CSS"] },
+// ];
 
 const skillGroups = {
   "Application Engineering": [
