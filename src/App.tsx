@@ -16,6 +16,7 @@ import {
   WifiOff,
   Wrench,
 } from "lucide-react";
+import "./styles.css";
 
 type Metric = {
   value: string;
@@ -36,87 +37,104 @@ type Role = {
 
 type Project = {
   title: string;
+  impact: string;
   icon: typeof FolderKanban;
   summary: string;
+  problem: string;
+  approach: string[];
   tech: string[];
-  details: string[];
   outcomes: string[];
+  image: string;
 };
+
+type SimpleProject = {
+  title: string;
+  tech: string[];
+  link?: string;
+};
+
+const base = import.meta.env.BASE_URL;
 
 const profile = {
   name: "K.V. Skanda Kumar",
-  role: "Tech Lead | Full Stack Engineer",
-  company:
-    "Chimple Learning Foundations | Building the Future of Free Educational Technology",
+  role: "Tech Lead · Full Stack · Platform & Data Systems",
   tagline:
-    "Building scalable, offline-first systems & data platforms",
+    "I build offline-first platforms that work in real-world low-connectivity environments — across mobile, web, and data systems.",
   location: "Bangalore, India",
   email: "kvskandakumar@gmail.com",
   phone: "+91 7981611434",
   linkedin: "https://www.linkedin.com/in/skanda-kumar-45876a1a0/",
   github: "https://github.com/kvskandakumar",
-  image: `${import.meta.env.BASE_URL}skanda-profile-pic.png`,
+  image: `${base}skanda-profile-pic.png`,
+  resume:
+    "https://docs.google.com/document/d/0B0lLWH37f_lueHdYRTVsMXhjZmlJMG1OVFpFZ3RUSXFWM2dB/edit?usp=sharing&ouid=108064239447909668115&resourcekey=0-DGrWePcbiMk-gKKRVvj7HA&rtpof=true&sd=true",
 };
-
-const shortBio =
-  "Tech Lead with 6+ years building scalable applications, offline-first platforms, and data systems optimized for low-connectivity environments.";
 
 const metrics: Metric[] = [
   { value: "6+", label: "Years Experience" },
   { value: "100%", label: "Offline Capability" },
-  { value: "15+", label: "Applications Delivered" },
-  { value: "20+", label: "Analytics Dashboards" },
+  { value: "15+", label: "Apps Delivered" },
+  { value: "20+", label: "Dashboards Built" },
 ];
 
 const about = [
-  "Progressed from Junior Developer to Tech Lead, driving end-to-end architecture for scalable systems used across web, mobile, and offline environments.",
-  "Tech Lead with 6+ years of experience designing and scaling multi-platform systems across web, mobile, and data platforms.",
-  "Specialized in offline-first architecture, cross-platform integrations, and BigQuery-based analytics pipelines optimized for real-world constraints.",
+  "I started as a Junior developer building features and gradually moved into leading architecture, delivery, and system design across multiple products.",
+  "Over the last 6+ years, I’ve worked on learning platforms that run across Android, web, and low-end devices — often in environments with little or no internet.",
+  "My work spans offline-first architecture, cross-platform systems using React and Capacitor, and analytics pipelines using BigQuery and GA4.",
+  "I enjoy solving real-world engineering problems where constraints matter — low bandwidth, low-end devices, and large-scale distribution.",
 ];
 
 const highlights: Highlight[] = [
   {
-    icon: Layers,
-    title: "Cross-platform Architecture",
-    description:
-      "Designed interoperable systems spanning React, Capacitor, Android, PWAs, Angular, and game-based learning apps.",
-  },
-  {
     icon: WifiOff,
     title: "Offline-first Systems",
     description:
-      "Built resilient delivery models that keep educational experiences fully usable in low-connectivity regions.",
+      "Built resilient learning experiences that continue working even when internet access is unreliable or unavailable.",
+  },
+  {
+    icon: Layers,
+    title: "Platform Architecture",
+    description:
+      "Designed shared systems across React, Capacitor, Android, PWAs, Flutter, Cocos, and Phaser-based learning products.",
   },
   {
     icon: BarChart3,
-    title: "Analytics Leadership",
+    title: "Data Engineering",
     description:
-      "Created ETL pipelines, reporting layers, and dashboards that convert GA4 data into product, learning, and business decisions.",
+      "Converted raw GA4 events into optimized BigQuery models, dashboards, and decision-ready reporting layers.",
   },
+];
+
+const strengths = [
+  "Designing offline-first systems that work without reliable internet",
+  "Building cross-platform applications across mobile and web",
+  "Optimizing performance for low-end Android devices",
+  "Reducing cloud and analytics costs through BigQuery optimization",
+  "Turning raw event data into product and business decisions",
 ];
 
 const roles: Role[] = [
   {
     title: "Tech Lead / Lead Software Developer",
-    period: "Sutara Learning Foundation | Mar 2020 - Present | Last 2 Years in Lead Role",
+    period: "Sutara Learning Foundation | Mar 2020 – Present | Last 2 years as Tech Lead",
     bullets: [
-      "Led architecture and development of a multi-platform EdTech ecosystem integrating React, Capacitor, Android, PWAs, and Angular across products such as Chimple Kids Learning and Tangerine Client App.",
-      "Spearheaded RESPECT platform integration across 3+ applications including Curious Reader, Tangerine, and Chimple Kids, standardizing content launch, tracking, and interoperability.",
-      "Developed wrapper solutions for web-based learning apps to improve performance and compatibility across Android devices.",
-      "Collaborated directly with CEOs, CTOs, and international stakeholders to shape product architecture and delivery roadmap.",
-      "Mentored developers and improved delivery timelines through stronger engineering direction and technical guidance.",
-      "Represented products at mEducation Alliance 2025 in Kenya and client presentations in Dubai to support global rollout.",
+      "Led architecture and development of multiple learning platforms across mobile and web.",
+      "Designed cross-platform systems using React, Capacitor, Android, PWAs, Flutter, Cocos, and Phaser.",
+      "Integrated RESPECT platform workflows across 3+ applications for standardized content launch, tracking, and interoperability.",
+      "Collaborated with CEOs, CTOs, and international stakeholders to define product architecture, delivery strategy, and rollout plans.",
+      "Mentored engineers and improved development velocity through clearer technical direction and reusable architecture patterns.",
+      "Represented products in international demos and stakeholder presentations in Kenya and Dubai.",
     ],
   },
   {
     title: "Senior Software Developer",
     period: "2 Years",
     bullets: [
-      "Built a container-based application using React and Capacitor to integrate existing Cocos games, reducing redevelopment effort by more than 40%.",
-      "Played a major role in designing and implementing a fully offline-first architecture with Supabase-backed flows, achieving 100% offline functionality.",
-      "Built and optimized features for React-based web applications using AWS and MongoDB backend services.",
-      "Contributed to cross-platform architecture decisions that enabled content reuse across mobile and web platforms.",
-      "Improved application performance and reduced load times through focused optimization work.",
+      "Built a container-based application using React and Capacitor to integrate existing Cocos games, reducing redevelopment effort by 40%+.",
+      "Contributed to a fully offline-first architecture, enabling 100% offline functionality for learning workflows.",
+      "Built and optimized React-based applications using AWS, MongoDB, and REST APIs.",
+      "Improved application performance and compatibility on low-end Android devices.",
+      "Contributed to architecture decisions that enabled content reuse across mobile and web platforms.",
     ],
   },
   {
@@ -124,141 +142,165 @@ const roles: Role[] = [
     period: "2 Years",
     bullets: [
       "Developed a Course Creator application using Flutter and Dart for the Chimple platform.",
-      "Implemented core features, UI components, and API integrations for content creation workflows.",
-      "Developed and enhanced 2D educational games using Cocos Creator and TypeScript, improving engagement and learning experience.",
+      "Implemented UI components, content workflows, and API integrations for internal tools.",
+      "Developed and enhanced 2D educational games using Cocos Creator and TypeScript.",
     ],
   },
   {
     title: "Data Engineering & Analytics",
-    period: "Parallel Role | 2+ Years",
+    period: "Parallel Ownership | 2+ Years",
     bullets: [
-      "Designed and implemented ETL pipelines in BigQuery for large-scale GA4 event processing.",
-      "Built 20+ Looker Studio dashboards that turned usage, progression, engagement, and operational data into reports for product, business, and stakeholder teams.",
-      "Designed analytics data models and reporting pipelines for event tracking, KPI measurement, and decision support.",
-      "Improved processing efficiency, reduced query execution time, and significantly cut analytics spend through optimization.",
-      "Started as the single person handling both data engineering and data analytics, laying the reporting foundation for the organization.",
+      "Designed ETL pipelines in BigQuery for large-scale GA4 event processing.",
+      "Built 20+ Looker Studio dashboards for usage, engagement, progression, and operational reporting.",
+      "Reduced BigQuery costs by 70–90% through query optimization, partitioning, clustering, and improved data modeling.",
+      "Improved reporting performance by 2–3x through better pipeline and query design.",
+      "Owned both data engineering and analytics functions, establishing the reporting foundation for the organization.",
     ],
   },
 ];
 
 const projects: Project[] = [
   {
-    title: "Multi-Platform EdTech Ecosystem",
-    icon: Layers,
-    summary:
-      "A shared architecture connecting learning products across web, Android, PWAs, and partner applications.",
-    tech: ["React", "Capacitor", "Android", "PWA", "Angular"],
-    details: [
-      "Led architecture for interoperable applications including Chimple Kids Learning and Tangerine Client App.",
-      "Created a stronger shared foundation so product teams could ship across multiple surfaces without fragmenting the experience.",
-      "Worked directly with leadership and stakeholders to align technical delivery with product roadmap and rollout needs.",
-    ],
-    outcomes: [
-      "Improved interoperability across applications",
-      "Reduced duplication in platform-specific work",
-      "Supported global product expansion",
-    ],
-  },
-  {
-    title: "RESPECT Platform Integration",
-    icon: Rocket,
-    summary:
-      "A standardized integration model for content launch, tracking, and interoperability across 3+ applications.",
-    tech: ["REST APIs", "xAPI", "React", "Capacitor", "Tracking"],
-    details: [
-      "Integrated RESPECT workflows across Curious Reader, Tangerine, and Chimple Kids.",
-      "Standardized learning content launch behavior and tracking flows across applications.",
-      "Created a reusable integration pattern that supported partner ecosystems and consistent reporting.",
-    ],
-    outcomes: [
-      "Standardized learning workflows",
-      "Better interoperability across products",
-      "Cleaner cross-application tracking",
-    ],
-  },
-  {
-    title: "Offline-First Container Platform",
+    title: "Chimple Kids Learning Platform — Offline-First System for Interactive Learning",
+    impact: "100% offline capability · 40%+ effort reduction",
     icon: WifiOff,
     summary:
-      "A container-based approach for reusing existing game content while delivering fully offline learning experiences.",
-    tech: ["React", "Capacitor", "Cocos", "Supabase", "Offline-first"],
-    details: [
-      "Built a wrapper/container application that integrated existing Cocos-based games instead of rebuilding them from scratch.",
-      "Designed an offline-first architecture so apps stayed fully functional in low-connectivity regions.",
-      "Optimized compatibility and runtime performance for low-end Android devices.",
+      "Re-architected a Cocos-based game platform into a scalable, offline-first system using React, Capacitor, and local-first data design.",
+    problem:
+      "The existing Cocos-based application had major limitations — no offline support, limited plugin ecosystem, slower development cycles, and lack of CI/CD automation. It also made feature enhancements difficult despite continuous user feedback from real-world usage.",
+    approach: [
+      "Redesigned the system using a container-based approach with Ionic Capacitor, wrapping existing Cocos games inside a React-driven application.",
+      "Implemented local asset serving via an internal server and introduced Supabase (open-source Firebase alternative) for local-first data storage.",
+      "Built new application layers using React and Capacitor plugins to enable faster development, better extensibility, and improved integration capabilities."
     ],
+    tech: ["React", "Capacitor", "Android", "Cocos","Supabase", "Offline-first"],
     outcomes: [
-      "100% offline functionality achieved",
-      "40%+ redevelopment effort reduced",
-      "Higher usability in constrained environments",
+      "Reduced redevelopment effort by 40% by reusing existing game assets within a new architecture.",
+      "Enabled 100% offline functionality, improving accessibility in low-connectivity environments.",
+      "Improved development speed and flexibility by moving away from Cocos limitations and enabling modern tooling and workflows.",
     ],
+    image: `${base}projects/offline-container.jpg`,
   },
   {
-    title: "BigQuery Analytics & Reporting Platform",
+    title: "RESPECT Platform Integration — Cross-Platform Learning Interoperability System",
+    impact: "3+ apps standardized · Better interoperability",
+    icon: Rocket,
+    summary:
+      "Built a standards-based integration layer for launching content and tracking learning activity across multiple applications.",
+    problem:
+      "Multiple learning applications lacked a consistent way to launch content, track user activity, and integrate with external partner systems, leading to fragmented workflows and inconsistent reporting.",
+    approach: [
+      "Led integration of RESPECT workflows across Curious Reader, Tangerine, and Chimple Kids.",
+      "Designed standardized launch parameters and deep linking mechanisms for cross-application content delivery.",
+      "Implemented tracking pipelines using xAPI patterns to ensure consistent learning activity reporting.",
+      "Built reusable integration patterns to enable interoperability across partner ecosystems and simplify future integrations.",
+    ],
+    tech: ["RESPECT", "xAPI", "React", "Capacitor", "REST APIs"],
+    outcomes: [
+      "Enabled consistent content launch and tracking across 3+ applications and partner systems.",
+      "Improved interoperability and reduced integration effort for new platforms using reusable integration patterns.",
+      "Standardized reporting workflows, enabling reliable analytics across learning applications.",
+    ],
+    image: `${base}projects/respect-integration.png`,
+  },
+  {
+    title: "BigQuery Analytics Platform — Scalable Data Pipeline for Product Intelligence",
+    impact: "80–90% lower cost · 2–3x faster reporting",
     icon: BarChart3,
     summary:
-      "An analytics stack that transformed raw GA4 data into trusted dashboards and faster reporting for decision-makers.",
+      "Transformed raw GA4 event data into reliable, cost-efficient analytics for product and leadership teams.",
+    problem:
+      "Raw GA4 analytics queries were expensive, slow, and difficult to use, limiting teams’ ability to make data-driven product decisions.",
+    approach: [
+      "Designed and built ETL pipelines to process GA4 event data into structured, query-optimized reporting tables.",
+      "Applied partitioning, clustering, and query optimization techniques to improve performance and reduce cost.",
+      "Developed dashboards for product usage, learner engagement, retention, and operational KPIs.",
+    ],
     tech: ["BigQuery", "GA4", "SQL", "Looker Studio", "ETL"],
-    details: [
-      "Built ETL pipelines and curated data models for large-scale event tracking and reporting.",
-      "Created 20+ dashboards that helped teams understand learner engagement, product usage, retention patterns, content performance, and operational KPIs.",
-      "Used partitioning, clustering, and query tuning to make reporting faster and far more cost efficient.",
-    ],
     outcomes: [
-      "20+ dashboards delivered",
-      "80-90% BigQuery cost reduction",
-      "2-3x faster data processing and reporting",
+      "Reduced BigQuery costs by 80–90% through optimized data modeling and query strategies.",
+      "Improved data processing and reporting speed by 2–3x, enabling faster insights.",
+      "Delivered 20+ dashboards used by product and leadership teams for decision-making.",
     ],
+    image: `${base}projects/bigquery-analytics.png`,
   },
 ];
 
+const moreProjects: SimpleProject[] = [
+  { title: "ReflectlyApp Smart Diary", tech: ["Flutter", "Dart"] },
+  { title: "Course Creator", tech: ["Flutter", "Dart"] },
+  { title: "Bahama App", tech: ["Cocos", "TypeScript"] },
+  { title: "Web Class", tech: ["React", "TypeScript", "AWS", "MongoDB"] },
+  { title: "join_litercy_activity", tech: ["Phaser", "TypeScript"] },
+  { title: "Crazy-dots", tech: ["Phaser", "TypeScript"] },
+  { title: "wordJoin", tech: ["Phaser", "TypeScript"] },
+  { title: "Account-manager", tech: ["Flutter Plugin"] },
+  {
+    title: "Ixo-claim crypto mining",
+    tech: ["GitHub Project"],
+    link: "https://github.com/chimple/ixo-claim",
+  },
+  {
+    title: "Chimple website",
+    tech: ["GitHub Project"],
+    link: "https://github.com/chimple/website",
+  },
+  { title: "Chimple Teacher app", tech: ["Flutter", "Dart"] },
+  { title: "Tangerine & tangy form", tech: ["Angular", "Docker"] },
+  { title: "tangerine-client-app", tech: ["Capacitor", "Angular"] },
+  { title: "Curious Reader CRcontainer", tech: ["Android", "nanoHTTP"] },
+  { title: "FeedTheMonsterJS", tech: ["Plain HTML", "CSS"] },
+  { title: "assessment-survey-js", tech: ["Plain HTML", "CSS"] },
+  { title: "CRWebPlayer (Storybook)", tech: ["Plain HTML", "CSS"] },
+];
+
 const skillGroups = {
-  "Languages & Frameworks": [
+  "Application Engineering": [
     "React",
     "Angular",
     "Capacitor",
     "Flutter",
     "Dart",
-    "Phaser",
-    "Cocos Creator",
+    "Android",
+    "PWAs",
     "TypeScript",
   ],
   "Data & Backend": [
-    "Firebase",
-    "Supabase",
     "BigQuery",
     "SQL",
     "GA4",
     "Looker Studio",
+    "Firebase",
+    "Supabase",
     "AWS",
     "MongoDB",
     "REST APIs",
     "xAPI",
   ],
-  "Architecture & Concepts": [
-    "Offline-First Systems",
-    "PWAs",
-    "Container-based Applications",
+  "Systems & Delivery": [
+    "Offline-first Architecture",
+    "Container Apps",
+    "Performance Optimization",
     "ETL Pipelines",
     "Cost Optimization",
     "CI/CD",
+    "GitHub Actions",
   ],
 };
 
 const achievements = [
-  "Promoted three times in six years from Junior Developer to Senior Developer to Lead Developer.",
-  "Led development of offline-first applications with full offline capability for low-connectivity regions and low-end devices.",
-  "Reduced redevelopment effort by 40%+ by integrating existing Cocos and Phaser experiences through container-based architecture.",
-  "Integrated RESPECT APIs across multiple applications to enable standardized learning workflows and interoperability.",
-  "Contributed to scaling the organization and product ecosystem from roughly 10 to 100+ employees.",
-  "Represented the organization internationally at mEducation Alliance 2025 in Kenya and product presentations in Dubai.",
-  "Conducted live demos and EdTech workshops for stakeholders and global partners.",
-  "Reduced BigQuery costs by 80-90% through ETL optimization, partitioning, clustering, and query tuning.",
-  "Improved analytics processing performance by 2-3x through better pipeline and query design.",
+  "Promoted from Junior Developer to Senior Developer to Lead Developer within six years.",
+  "Led offline-first product architecture for learning platforms used in low-connectivity environments.",
+  "Reduced redevelopment effort by 40%+ through container-based app architecture.",
+  "Integrated RESPECT platform workflows across multiple applications.",
+  "Reduced BigQuery costs by 80–90% through ETL optimization and query tuning.",
+  "Built 20+ dashboards used by product, business, and stakeholder teams.",
+  "Represented the organization in international demos and EdTech presentations in Kenya and Dubai.",
+  "Contributed to scaling the product and engineering ecosystem during organizational growth.",
 ];
 
 const education = {
-  degree: "B.Tech, Electronic and Communication Engineering",
+  degree: "B.Tech, Electronics and Communication Engineering",
   college: "Intell Engineering College",
 };
 
@@ -301,65 +343,22 @@ function App() {
   return (
     <div className="page-shell">
       <header className="topbar">
-        <div>
-          <h1 className="brand">Skanda</h1>
-          {/* <p className="brand">{profile.name}</p> */}
-          {/* <p className="brand-subtitle">{profile.role}</p> */}
-        </div>
+        <a href="#about" className="brand">
+          Skanda
+        </a>
+
         <nav>
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
+          <a href="#work">Projects</a>
           <a href="#achievements">Achievements</a>
+          <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <main>
-        <section id="about" className="hero hero-about">
-          <motion.aside
-            className="profile-card"
-            initial="hidden"
-            animate="visible"
-            variants={fadeIn}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-          >
-              <div className="profile-photo-wrap">
-                <img className="profile-photo" src={profile.image} alt={profile.name} />
-              </div>
-              <h3>{profile.name}</h3>
-              <p className="profile-role">{profile.role}</p>
-              <div className="profile-divider" />
-              <p>{shortBio}</p>
-              <div className="profile-contact">
-                <span>
-                  <Mail size={16} /> {profile.email}
-                </span>
-                <span>
-                  <MapPin size={16} /> {profile.location}
-                </span>
-              </div>
-              <div className="profile-meta">
-                <span>
-                  <Briefcase size={16} /> 6+ years in Full Stack Development
-                </span>
-                <span>
-                  <MapPin size={16} /> {profile.location}
-                </span>
-                <span>
-                  <Wrench size={16} /> React, Capacitor, Flutter, BigQuery
-                </span>
-              </div>
-              <div className="profile-socials">
-                <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-                  <GitHubIcon width={19} height={19} />
-                </a>
-                <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                  <LinkedInIcon width={19} height={19} />
-                </a>
-              </div>
-          </motion.aside>
+        <section id="about" className="hero">
           <motion.div
             className="hero-copy"
             initial="hidden"
@@ -367,60 +366,128 @@ function App() {
             variants={fadeIn}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <p className="eyebrow">Lead Portfolio</p>
-            {/* <h1>{profile.name}</h1> */}
-            <p className="hero-title">{profile.role}</p>
-            <p className="hero-text">{profile.tagline}</p>
+            <p className="eyebrow">Tech Lead Portfolio</p>
+
+            <h1>Tech Lead specializing in offline-first architecture, cross-platform systems, and data engineering</h1>
+
+            <p className="hero-text">
+              Tech Lead with 6+ years of experience in full-stack development, data engineering, 
+              and analytics in the EdTech domain. Progressed from Junior to Lead,
+              owning end-to-end architecture for scalable, multi-platform systems.
+            </p>
 
             <div className="hero-actions">
-              <a className="button button-primary" href="#projects">
-                View Projects <ArrowRight size={18} />
+              <a className="button button-primary" href="#work">
+                View Selected Work <ArrowRight size={18} />
               </a>
-              <a className="button button-secondary" href={`mailto:${profile.email}`}>
-                <Mail size={18} /> Contact Me
+              <a className="button button-secondary" href={profile.resume} target="_blank">
+                Download Resume
+              </a>
+              <a className="button button-ghost" href={`mailto:${profile.email}`}>
+                <Mail size={18} /> Contact
               </a>
             </div>
 
             <div className="metric-grid">
               {metrics.map((metric) => (
-                <article className="card metric-card" key={metric.label}>
+                <article className="metric-card" key={metric.label}>
                   <strong>{metric.value}</strong>
                   <span>{metric.label}</span>
                 </article>
               ))}
             </div>
-            <div className="hero-story">
-              {about.map((paragraph) => (
-                <p className="hero-story-text" key={paragraph}>
-                  {paragraph}
-                </p>
-              ))}
-
-              <div className="highlight-grid">
-                {highlights.map((item) => {
-                  const Icon = item.icon;
-
-                  return (
-                    <article className="card highlight-card" key={item.title}>
-                      <div className="icon-chip">
-                        <Icon size={20} />
-                      </div>
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </article>
-                  );
-                })}
-              </div>
-            </div>
           </motion.div>
+
+          <motion.aside
+            className="profile-card"
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+          >
+            <div className="profile-photo-wrap">
+              <img className="profile-photo" src={profile.image} alt={profile.name} />
+            </div>
+
+            <h3>{profile.name}</h3>
+            <p className="profile-role">{profile.role}</p>
+
+            <div className="profile-divider" />
+
+            <div className="profile-meta">
+              <span>
+                <Briefcase size={16} /> 6+ years building scalable multi-platform systems
+              </span>
+              <span>
+                <MapPin size={16} /> {profile.location}
+              </span>
+              <span>
+                <Wrench size={16} /> React, Capacitor, Android, BigQuery
+              </span>
+            </div>
+
+            <div className="profile-socials">
+              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+                <GitHubIcon width={19} height={19} />
+              </a>
+              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <LinkedInIcon width={19} height={19} />
+              </a>
+            </div>
+          </motion.aside>
+        </section>
+
+        <section className="content-section">
+          <SectionTitle
+            label="About"
+            title="I work at the intersection of product, engineering, and data — building systems, not just features."
+            description="My best work focuses on real-world constraints: low bandwidth, low-end devices, offline-first systems, and measurable product outcomes."
+          />
+
+          <div className="about-grid">
+            <article className="card story-card">
+              {about.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </article>
+
+            <article className="card strength-card">
+              <h3>What I’m good at</h3>
+              <ul className="detail-list">
+                {strengths.map((item) => (
+                  <li key={item}>
+                    <CheckCircle2 size={18} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </div>
+
+          <div className="highlight-grid">
+            {highlights.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <article className="card highlight-card" key={item.title}>
+                  <div className="icon-chip">
+                    <Icon size={20} />
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              );
+            })}
+          </div>
         </section>
 
         <section id="experience" className="content-section">
           <SectionTitle
             label="Experience"
-            title="From hands-on development to leading architecture, delivery, and reporting systems."
-            description="The portfolio below reflects both role progression and the parallel data engineering ownership that strengthened product decision-making."
+            title="How I grew from Junior Developer to Tech Lead."
+            description="I’ve worked across frontend, backend, mobile, and data — eventually leading architecture and delivery for multiple products."
           />
+
           <div className="timeline">
             {roles.map((role) => (
               <article className="card timeline-card" key={role.title}>
@@ -428,6 +495,7 @@ function App() {
                   <h3>{role.title}</h3>
                   <span>{role.period}</span>
                 </div>
+
                 <ul className="detail-list">
                   {role.bullets.map((bullet) => (
                     <li key={bullet}>
@@ -441,26 +509,58 @@ function App() {
           </div>
         </section>
 
-        <section id="projects" className="content-section">
+        <section id="work" className="content-section">
           <SectionTitle
             label="Projects"
-            title="Project stories extracted from the experience journey."
-            description="Each project below is derived from the work described in your experience section and rewritten as a portfolio-ready case study."
+            title="Projects that demonstrate system design, execution, and measurable impact."
+            description="Each case study breaks down the problem, the solution, and the outcome."
           />
+
           <div className="project-grid">
             {projects.map((project) => {
               const Icon = project.icon;
 
               return (
                 <article className="card project-card" key={project.title}>
+                  <div className="project-image-wrap">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="project-image"
+                      onError={(event) => {
+                        event.currentTarget.style.display = "none";
+                      }}
+                    />
+                  </div>
+
                   <div className="project-head">
                     <div className="icon-chip project-chip">
                       <Icon size={20} />
                     </div>
+
                     <div>
                       <h3>{project.title}</h3>
                       <p>{project.summary}</p>
                     </div>
+                  </div>
+
+                  <p className="project-impact">{project.impact}</p>
+
+                  <div className="case-block">
+                    <p className="case-label">Problem</p>
+                    <p>{project.problem}</p>
+                  </div>
+
+                  <div className="case-block">
+                    <p className="case-label">What I did</p>
+                    <ul className="detail-list compact-list">
+                      {project.approach.map((detail) => (
+                        <li key={detail}>
+                          <FolderKanban size={18} />
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
                   <div className="tag-row">
@@ -471,17 +571,8 @@ function App() {
                     ))}
                   </div>
 
-                  <ul className="detail-list compact-list">
-                    {project.details.map((detail) => (
-                      <li key={detail}>
-                        <FolderKanban size={18} />
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-
                   <div className="impact-box">
-                    <p>Impact</p>
+                    <p>Outcome</p>
                     <ul>
                       {project.outcomes.map((outcome) => (
                         <li key={outcome}>{outcome}</li>
@@ -492,14 +583,52 @@ function App() {
               );
             })}
           </div>
+
+          {/* <div className="more-projects">
+            <div className="more-projects-head">
+              <h3>More Projects</h3>
+              <p>Additional product, game, web, and tooling work across EdTech platforms.</p>
+            </div>
+
+            <div className="more-projects-grid">
+              {moreProjects.map((project) => {
+                const content = (
+                  <article className="card mini-project-card" key={project.title}>
+                    <div className="mini-project-top">
+                      <h4>{project.title}</h4>
+                      {project.link ? <ExternalLink size={16} /> : null}
+                    </div>
+                    <div className="tag-row">
+                      {project.tech.map((tech) => (
+                        <span className="tag" key={`${project.title}-${tech}`}>
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </article>
+                );
+
+                if (project.link) {
+                  return (
+                    <a href={project.link} target="_blank" rel="noreferrer" key={project.title} className="mini-project-link">
+                      {content}
+                    </a>
+                  );
+                }
+
+                return content;
+              })}
+            </div>
+          </div> */}
         </section>
 
         <section className="content-section">
           <SectionTitle
-            label="Analytics Impact"
-            title="How the data work translated into reporting value."
-            description="The dashboards were not just visual outputs. They helped teams understand learner behavior, feature adoption, content effectiveness, operational bottlenecks, and overall product direction."
+            label="Data Impact"
+            title="I don’t just build dashboards — I build the pipeline behind trusted decisions."
+            description="Owning both data engineering and analytics helped me connect technical implementation with what product, business, and leadership teams needed to understand."
           />
+
           <div className="analytics-layout">
             <article className="card analytics-card">
               <h3>What the reporting enabled</h3>
@@ -510,15 +639,15 @@ function App() {
                 </li>
                 <li>
                   <BarChart3 size={18} />
-                  <span>Business and stakeholder teams gained clearer visibility into rollout progress, adoption, and outcome signals.</span>
+                  <span>Business teams gained clearer visibility into rollout progress, adoption, and learning outcomes.</span>
                 </li>
                 <li>
                   <BarChart3 size={18} />
-                  <span>Operational teams could identify content gaps, delivery issues, and areas needing support or optimization.</span>
+                  <span>Operational teams could identify content gaps, delivery issues, and support needs.</span>
                 </li>
                 <li>
                   <BarChart3 size={18} />
-                  <span>Leadership benefited from faster, more trustworthy reporting without the cost overhead of raw-query-heavy workflows.</span>
+                  <span>Leadership received faster reporting without the cost overhead of raw-query-heavy workflows.</span>
                 </li>
               </ul>
             </article>
@@ -526,22 +655,68 @@ function App() {
             <article className="card analytics-card analytics-accent">
               <h3>Why this mattered</h3>
               <p>
-                By owning both data engineering and analytics, you were able to connect raw GA4 events to business-ready reporting. That closed the gap between technical data pipelines and the questions decision-makers actually needed answered.
+                By owning both data engineering and analytics, I connected raw GA4 event data to business-ready insights, bridging the gap between data pipelines and real decision-making needs.
               </p>
+
               <div className="mini-metrics">
                 <div>
                   <strong>20+</strong>
                   <span>Dashboards</span>
                 </div>
                 <div>
-                  <strong>2-3x</strong>
-                  <span>Faster processing</span>
+                  <strong>2–3x</strong>
+                  <span>Faster reporting</span>
                 </div>
                 <div>
-                  <strong>80-90%</strong>
-                  <span>Lower BigQuery cost</span>
+                  <strong>80–90%</strong>
+                  <span>Lower cost</span>
                 </div>
               </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="achievements" className="content-section split-section">
+          <div>
+            <SectionTitle
+              label="Education"
+              title="Academic foundation"
+              description="Formal engineering background supporting my product and systems work."
+            />
+
+            <article className="card education-card">
+              <div className="icon-chip">
+                <GraduationCap size={20} />
+              </div>
+
+              <div>
+                <h3>{education.degree}</h3>
+                <p>{education.college}</p>
+              </div>
+            </article>
+          </div>
+
+          <div>
+            <SectionTitle
+              label="Achievements"
+              title="Career growth and measurable outcomes"
+              description="A concise snapshot of leadership, delivery, and analytics impact."
+            />
+
+            <article className="card achievements-card">
+              <div className="achievement-head">
+                <Trophy size={20} />
+                <h3>Key wins</h3>
+              </div>
+
+              <ul className="detail-list">
+                {achievements.map((item) => (
+                  <li key={item}>
+                    <CheckCircle2 size={18} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </article>
           </div>
         </section>
@@ -549,9 +724,10 @@ function App() {
         <section id="skills" className="content-section">
           <SectionTitle
             label="Skills"
-            title="A stack that spans apps, infrastructure, data, and delivery."
-            description="The portfolio combines engineering breadth with product-minded systems design."
+            title="A practical stack for building, shipping, and measuring products."
+            description="My experience spans application engineering, data systems, architecture, and delivery."
           />
+
           <div className="skills-grid">
             {Object.entries(skillGroups).map(([group, items]) => (
               <article className="card skill-card" key={group}>
@@ -568,54 +744,16 @@ function App() {
           </div>
         </section>
 
-        <section className="content-section split-section">
-          <div>
-            <SectionTitle
-              label="Education"
-              title="Academic Foundation"
-              description="Formal background supporting the engineering journey."
-            />
-            <article className="card education-card">
-              <div className="icon-chip">
-                <GraduationCap size={20} />
-              </div>
-              <div>
-                <h3>{education.degree}</h3>
-                <p>{education.college}</p>
-              </div>
-            </article>
-          </div>
-
-          <div id="achievements" className="content-section">
-            <SectionTitle
-              label="Achievements"
-              title="Career growth and measurable outcomes."
-              description="A concise snapshot of leadership, delivery, and analytics impact."
-            />
-            <article className="card achievements-card">
-              <div className="achievement-head">
-                <Trophy size={20} />
-                <h3>Key Achievements</h3>
-              </div>
-              <ul className="detail-list">
-                {achievements.map((item) => (
-                  <li key={item}>
-                    <CheckCircle2 size={18} />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          </div>
-        </section>
 
         <section id="contact" className="content-section">
           <div className="card contact-panel">
             <div className="contact-copy">
               <p className="eyebrow">Contact</p>
-              <h2>Open to meaningful EdTech, platform, and engineering leadership conversations.</h2>
+              <h2>Let’s build something impactful.</h2>
               <p>
-                If you&apos;re building mission-driven technology, learning products, or analytics-informed platforms, this portfolio is ready to support outreach and hiring conversations.
+                I’m currently working as a Tech Lead in EdTech and open to roles
+                where I can work on scalable systems, platform engineering, or
+                data-driven products.
               </p>
             </div>
 

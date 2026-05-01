@@ -1,4 +1,4 @@
-# portifoilo-react
+# portfolio-react
 
 Personal portfolio built with vanilla React and Vite, ready for GitHub Pages deployment.
 
@@ -39,4 +39,4 @@ The Vite config currently uses:
 base: "/portifoilo-react/"
 ```
 
-If your GitHub repository name is different, update [`vite.config.ts`](/home/skanda/Documents/GitHub/portifoilo-react/vite.config.ts:1) so the `base` matches `/<your-repo-name>/`.
+If you rename the GitHub repository to `portfolio-react`, also update [`vite.config.ts`](/home/skanda/Documents/GitHub/portifoilo-react/vite.config.ts:1) so the `base` matches `"/portfolio-react/"`.
